@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>SEMTLE HOUSE</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<style>
+			@font-face {
+				font-family: 'paybooc-Bold';
+				src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/paybooc-Bold.woff') format('woff');
+				font-weight: normal;
+				font-style: normal;
+			}
+			* {
+				font-family: 'paybooc-Bold';
+				user-select: none;
+			}
+			.title {
+				position: relative;
+				top: 50vh;
+				transform: translateY(-50%);
+				text-align: center;
+			}
+
+
+			@media screen and (max-width: 500px){
+				div.title > span.temp {
+					font-size: 30px !important;
+				}
+			}
+
+			div.title > span.titleText {
+				color: gray;
+				transition: 0.5s;
+			}
+
+			div.title > span.titleText2 {
+				margin-top: 30px;
+				color: gray;
+				transition: 0.5s;
+			}
+
+			div.title > span.temp {
+				transition: 0.5s;
+				font-size: 60px;
+			}
+
+			div.title > span.copyright {
+				position: relative;
+				bottom: -100px;
+				transition: 0.5s;
+				font-size: 30px;
+				opacity: 0.5;
+				color: gray;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="title">
+			<span class="titleText">현재 온도는</span><br>
+			<span class="temp">{{ temp }}°C</span><br>
+			<span class="titleText2">현재 습도는</span>
+			<span class="hum">{{ humi }}%</span><br>
+			<span class="copyright">by Semtle<span>
+		</div>
+	</body>
+</html>
